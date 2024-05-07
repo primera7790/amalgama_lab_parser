@@ -1,7 +1,7 @@
+import ssl
+import csv
 import requests
 from bs4 import BeautifulSoup
-import csv
-import ssl
 from urllib3 import poolmanager
 
 
@@ -30,6 +30,7 @@ with open('index.html', 'w', encoding='utf8') as file:
 
 with open('index.html', encoding='utf8') as file:
     src = file.read()
+    
 src = src\
     .replace('<br />', '')\
     .replace('original">  ', 'original">')\
@@ -45,6 +46,7 @@ translate_text = soup.find('div', class_='texts col').find(id='click_area').find
 
 with open(f'data/{track_artist} - {track_name}.csv', 'w', encoding='utf-8-sig', newline='') as file:
     writer = csv.writer(file)
+    
     for i in range(len(original_text)):
         if translate_text[i].text == '':
             writer.writerow(original_text[i])
