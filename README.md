@@ -1,8 +1,8 @@
 # Парсер текста песен с переводом
 
-## Используемые технологии:
-  - Язык программирования: &nbsp; `python` ;
-  - Основные библиотеки: &nbsp; `beautifulsoup4` , `requests` , `lxml` , `urllib3` .
+## Технологии:
+  - Язык: &nbsp; `python` ;
+  - Библиотеки: &nbsp; `beautifulsoup4` , `requests` , `lxml` , `urllib3` .
 
 ## Описание:
   
