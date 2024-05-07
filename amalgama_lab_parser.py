@@ -19,7 +19,7 @@ class TLSAdapter(requests.adapters.HTTPAdapter):
                 ssl_context=ctx)
 
 
-url = input('Вставьте ссылку на текст песни: ')
+url = input('Укажите ссылку на текст песни: ')
 
 session = requests.session()
 session.mount('https://', TLSAdapter())
