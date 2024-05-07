@@ -43,7 +43,7 @@ track_artist = soup.find('div', id='location_texts').previous_element.previous_e
 original_text = soup.find('div', class_='texts col').find(id='click_area').find_all(class_='original')
 translate_text = soup.find('div', class_='texts col').find(id='click_area').find_all(class_='translate')
 
-with open(f'{track_artist} - {track_name}.csv', 'w', encoding='utf-8-sig', newline='') as file:
+with open(f'data/{track_artist} - {track_name}.csv', 'w', encoding='utf-8-sig', newline='') as file:
     writer = csv.writer(file)
     for i in range(len(original_text)):
         if translate_text[i].text == '':
